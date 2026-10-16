@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hair and More | Barbería, peluquería y nails bar en Santiago</title>
+<meta name="description" content="Hair and More: barbería, peluquería y nails bar en Av. Ossa 235, oficina 750, Santiago. Abierto todos los días de 10:30 a 19:00.">
+<meta name="theme-color" content="#f4efe8">
+<link rel="icon" href="img/equipo-miguel.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4efe8; --paper:#fbf8f3; --sand:#e9e1d5; --ink:#161311; --text:#3d3833; --mute:#857c72; --line:#e0d7ca;
+  --car:#b07a4f; --car2:#d6a274; --carbg:#f3e3d2; --dark:#191512;
+  --gut:clamp(16px,4vw,56px); --r:26px;
+  --serif:"Instrument Serif",Georgia,serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{background:var(--bg);color:var(--text);font:400 17px/1.6 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{color:var(--ink);font-weight:600;letter-spacing:-.045em;line-height:.98;text-wrap:balance}
+h1 i,h2 i{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em;color:var(--car)}
+.wrap{max-width:1300px;margin:0 auto;padding:0 var(--gut)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;background:var(--paper);border:1px solid var(--line);font:600 13px/1 "Inter Tight";color:var(--ink)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--car)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 24px;border-radius:99px;font:600 15px/1 "Inter Tight";background:var(--ink);color:#fff;transition:transform .25s,background .25s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);background:var(--car)}
+.btn.l{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.l:hover{background:var(--ink);color:#fff}
+.btn.c{background:var(--car)}
+.btn.c:hover{background:var(--ink)}
+.ic{width:20px;height:20px;flex:none}
+
+/* nav */
+.nav{position:fixed;top:40px;left:0;right:0;z-index:60;padding:14px 0;transition:padding .3s}
+.nav .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px;padding:0 8px 0 22px;border-radius:99px;background:rgba(251,248,243,.82);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line),0 18px 40px -30px rgba(25,21,18,.5)}
+.nav .logo img{height:40px;filter:brightness(0)}
+.nav ul{display:flex;gap:4px;list-style:none;font-weight:500;font-size:15px}
+.nav ul a{padding:10px 14px;border-radius:99px;transition:background .2s}
+.nav ul a:hover{background:var(--sand)}
+.nav .btn{padding:13px 20px}
+#burger{display:none;width:46px;height:46px;border-radius:50%;background:var(--sand);position:relative}
+#burger i,#burger i::before,#burger i::after{position:absolute;left:13px;width:20px;height:2px;border-radius:2px;background:var(--ink);content:"";transition:.3s}
+#burger i{top:22px}#burger i::before{left:0;top:-6px}#burger i::after{left:0;top:6px}
+#movil{position:fixed;inset:40px 0 0;z-index:55;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding:120px var(--gut) 40px;gap:2px;opacity:0;pointer-events:none;transition:opacity .3s}
+#movil a{font:600 40px/1.25 "Inter Tight";letter-spacing:-.04em;color:var(--ink)}
+#movil .btn{font-size:16px;margin-top:22px;align-self:flex-start}
+body.open #movil{opacity:1;pointer-events:auto}
+body.open #burger i{background:transparent}
+body.open #burger i::before{top:0;transform:rotate(45deg)}
+body.open #burger i::after{top:0;transform:rotate(-45deg)}
+
+/* hero */
+.hero{padding:150px 0 70px}
+.hero .g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero h1{font-size:clamp(56px,7.6vw,120px);margin:22px 0 24px}
+.hero p{font-size:clamp(17px,1.4vw,20px);max-width:470px}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+.hero .facts{display:flex;gap:30px;margin-top:40px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.hero .facts b{display:block;font:600 22px "Inter Tight";color:var(--ink);letter-spacing:-.03em}
+.hero .facts div>span{font-size:14px;color:var(--mute)}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.pics .ph{border-radius:var(--r);overflow:hidden;background:var(--sand)}
+.pics .ph img{width:100%;height:100%;object-fit:cover}
+.pics .a{aspect-ratio:3/4.3}
+.pics .b{aspect-ratio:3/4.3;margin-top:70px}
+.pics .badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:132px;height:132px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;font:400 22px/1.05 var(--serif);font-style:italic;box-shadow:0 0 0 8px var(--bg)}
+.pics .badge small{display:block;font:600 11px "Inter Tight";font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--car2);margin-top:6px}
+
+/* categorías */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cat{position:relative;border-radius:var(--r);padding:30px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:transform .35s var(--ease)}
+.cat:hover{transform:translateY(-6px)}
+.cat:nth-child(1){background:var(--dark);color:#fff}
+.cat:nth-child(2){background:var(--carbg)}
+.cat:nth-child(3){background:var(--paper);border:1px solid var(--line)}
+.cat h3{font-size:clamp(34px,3.4vw,48px);color:inherit}
+.cat h3 i{font-family:var(--serif);font-weight:400}
+.cat p{font-size:15px;opacity:.8;max-width:280px}
+.cat .from{display:flex;justify-content:space-between;align-items:flex-end}
+.cat .from b{font:600 22px "Inter Tight";letter-spacing:-.03em}
+.cat .from span{font-size:13px;opacity:.65}
+.cat .arrow{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px currentColor;opacity:.8}
+
+section{padding:clamp(80px,10vw,130px) 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:clamp(30px,4vw,50px);flex-wrap:wrap}
+.sh h2{font-size:clamp(46px,5.8vw,88px);margin-top:16px}
+.sh p{max-width:380px;color:var(--mute)}
+
+/* servicios */
+.tabs{display:inline-flex;gap:4px;padding:5px;border-radius:99px;background:var(--sand);margin-bottom:26px}
+.tabs button{padding:12px 22px;border-radius:99px;font-weight:600;font-size:15px;color:var(--mute);transition:.25s}
+.tabs button.on{background:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.srv{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:20px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;transition:border-color .25s,transform .25s}
+.srv:hover{border-color:var(--car);transform:translateY(-3px)}
+.srv-n h4{font-size:19px;letter-spacing:-.02em;line-height:1.2}
+.srv-n p{font-size:13.5px;color:var(--mute);margin-top:6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.srv-m{display:flex;justify-content:space-between;align-items:center}
+.srv-t{font-size:13px;color:var(--mute);display:flex;align-items:center;gap:6px}
+.srv-t::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--car2)}
+.srv-p{font:600 20px "Inter Tight";color:var(--ink);letter-spacing:-.03em}
+.note{color:var(--mute);font-size:14px;margin-top:22px}
+
+/* barbería */
+.barber{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.barber .ph{border-radius:var(--r);overflow:hidden;min-height:560px;position:relative}
+.barber .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.barber .card{background:var(--dark);color:rgba(255,255,255,.8);border-radius:var(--r);padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center}
+.barber h2{color:#fff;font-size:clamp(40px,4.4vw,64px);margin:16px 0 18px}
+.barber .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff}
+.combo{list-style:none;margin:28px 0 30px;display:grid;gap:8px}
+.combo li{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.06);font-weight:500}
+.combo li b{color:#fff;font-weight:600}
+.combo li.t{background:var(--car);color:#fff}
+.barber .btn{background:#fff;color:var(--ink);align-self:flex-start}
+.barber .btn:hover{background:var(--car2)}
+
+/* equipo */
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.person{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px 16px 24px}
+.person .av{aspect-ratio:1;border-radius:18px;display:grid;place-items:center;font:400 96px/1 var(--serif);font-style:italic;color:var(--car);background:var(--carbg);overflow:hidden;margin-bottom:18px}
+.person:nth-child(even) .av{background:var(--sand);color:var(--ink)}
+.person .av img{width:100%;height:100%;object-fit:cover;background:#fff}
+.person h3{font-size:24px;letter-spacing:-.03em;padding:0 6px}
+.person .r{display:inline-block;margin:10px 6px 10px;padding:5px 11px;border-radius:99px;background:var(--ink);color:#fff;font-size:12px;font-weight:600}
+.person p{font-size:14.5px;color:var(--mute);padding:0 6px}
+
+/* galería */
+.gal{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.gal figure{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:3/4}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:14px;bottom:14px;padding:8px 14px;border-radius:99px;background:rgba(251,248,243,.92);font-weight:600;font-size:14px;color:var(--ink)}
+
+/* ubicación */
+.loc{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
+.loc .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(26px,4vw,44px)}
+.loc h2{font-size:clamp(40px,4.6vw,66px);margin:16px 0 24px}
+.rows{display:grid;gap:8px}
+.row{display:flex;gap:14px;align-items:center;padding:14px;border-radius:16px;background:var(--bg)}
+.row .i{width:42px;height:42px;border-radius:12px;background:var(--ink);color:#fff;display:grid;place-items:center;flex:none}
+.row small{display:block;font-size:12.5px;color:var(--mute)}
+.row b{font-weight:600;color:var(--ink);font-size:15.5px}
+a.row:hover{background:var(--carbg)}
+.map{border-radius:var(--r);overflow:hidden;min-height:480px;position:relative;border:1px solid var(--line)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.6) sepia(.25)}
+
+/* cta */
+.cta-band{margin:0 var(--gut);border-radius:36px;background:var(--car);color:#fff;text-align:center;padding:clamp(70px,9vw,120px) 24px;position:relative;overflow:hidden}
+.cta-band h2{color:#fff;font-size:clamp(48px,7vw,110px)}
+.cta-band h2 i{color:var(--dark)}
+.cta-band p{margin:18px 0 32px;opacity:.85}
+.cta-band .btn{background:#fff;color:var(--ink)}
+.cta-band .btn:hover{background:var(--dark);color:#fff}
+footer{padding:44px 0;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:36px;filter:brightness(0);opacity:.75}
+.wa{position:fixed;right:20px;bottom:20px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:transform .25s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:28px;height:28px;fill:currentColor}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.visible{opacity:1;transform:none}
+
+@media(max-width:1060px){
+  .nav ul,.nav .bar>.btn{display:none}#burger{display:block}
+  .grid{grid-template-columns:1fr 1fr}
+  .team{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .hero .g,.barber,.loc{grid-template-columns:1fr}
+  .cats{grid-template-columns:1fr}
+  .cat{min-height:190px}
+  .barber .ph{min-height:420px}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .nav{padding:10px 0}.nav .bar{height:58px}.nav .logo img{height:34px}
+  .hero{padding-top:124px}
+  .hero .cta{flex-direction:column}
+  .pics .b{margin-top:40px}
+  .pics .badge{width:104px;height:104px;font-size:18px}
+  .tabs{display:flex;width:100%}.tabs button{flex:1;padding:12px 8px}
+  .grid{grid-template-columns:1fr}
+  .team{grid-template-columns:1fr 1fr;gap:10px}
+  .person{padding:10px 10px 18px}.person h3{font-size:19px}.person .av{font-size:70px}
+  .gal{grid-template-columns:1fr 1fr}
+  .gal figure:nth-child(3){grid-column:span 2;aspect-ratio:4/3}
+  .map{min-height:340px}
+  .cta-band{margin:0 12px;border-radius:26px}
+  #movil a{font-size:34px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <div class="bar">
+      <a href="#" class="logo" aria-label="Hair and More, inicio"><img src="img/logo-recorte.png" alt="Hair and More"></a>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#barberia">Barbería</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+      </ul>
+      <a class="btn" data-reservar href="#">Reservar hora</a>
+      <button id="burger" aria-label="Menú"><i></i></button>
+    </div>
+  </div>
+</header>
+<nav id="movil">
+  <a href="#servicios">Servicios</a><a href="#barberia">Barbería</a><a href="#equipo">Equipo</a><a href="#trabajos">Trabajos</a><a href="#ubicacion">Ubicación</a>
+  <a class="btn c" data-reservar href="#">Reservar hora</a>
+</nav>
+
+<section class="hero">
+  <div class="wrap g">
+    <div>
+      <span class="pill rv"><i></i>Barbería · Peluquería · Nails bar</span>
+      <h1 class="rv">Sacamos la <i>mejor versión</i> de ti.</h1>
+      <p class="rv">Cortes, barba, color, tratamientos y uñas en un solo lugar. Abierto todos los días en Av. Ossa 235, Santiago.</p>
+      <div class="cta rv"><a class="btn" data-reservar href="#">Reservar hora online</a><a class="btn l" href="#servicios">Servicios y precios</a></div>
+      <div class="facts rv">
+        <div><b>10:30 – 19:00</b><span>todos los días</span></div>
+        <div><b>Desde <span data-desde>$3.990</span></b><span>perfilado de cejas</span></div>
+        <div><b>Corte hombre</b><span>$18.990 · 20 min</span></div>
+      </div>
+    </div>
+    <div class="pics rv">
+      <div class="ph a"><img src="img/foto-fade.jpg" alt="Corte fade con barba perfilada"></div>
+      <div class="ph b"><img src="img/foto-corte.jpg" alt="Corte con degradado alto"></div>
+      <div class="badge"><span>Hair<br>&amp; more<small>Santiago</small></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cats">
+    <a class="cat rv" href="#servicios" data-go="barberia"><div><h3>Barbería</h3><p>Corte, barba con toalla caliente, platinados, visos y camuflaje de canas.</p></div><div class="from"><div><span>desde</span><br><b>$3.990</b></div><span class="arrow">→</span></div></a>
+    <a class="cat rv" href="#servicios" data-go="peluqueria"><div><h3>Peluquería</h3><p>Corte de mujer, color, balayage, baby lights, alisados y tratamientos.</p></div><div class="from"><div><span>desde</span><br><b>$7.990</b></div><span class="arrow">→</span></div></a>
+    <a class="cat rv" href="#servicios" data-go="nails"><div><h3><i>Nails</i> bar</h3><p>Esmaltado permanente, soft gel, degradé, ojo de gato y vitamina.</p></div><div class="from"><div><span>desde</span><br><b>$4.990</b></div><span class="arrow">→</span></div></a>
+  </div>
+</div>
+
+<section id="servicios" data-servicios>
+  <div class="wrap">
+    <div class="sh">
+      <div><span class="pill rv"><i></i>Servicios y precios</span><h2 class="rv">Elige tu <i>servicio</i></h2></div>
+      <p class="rv">Precios en pesos chilenos. Reserva online y te esperamos a la hora.</p>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button data-cat="barberia" role="tab">Barbería</button>
+      <button data-cat="peluqueria" role="tab">Peluquería</button>
+      <button data-cat="nails" role="tab">Nails bar</button>
+    </div>
+    <div class="grid" data-panel role="tabpanel"></div>
+    <p class="note">Los tiempos son referenciales. Los precios pueden variar según el largo y el tipo de cabello.</p>
+  </div>
+</section>
+
+<section id="barberia" style="padding-top:0">
+  <div class="wrap barber">
+    <div class="ph rv"><img src="img/foto-barba.jpg" alt="Barbero perfilando una barba en Hair and More" loading="lazy"></div>
+    <div class="card rv">
+      <span class="pill"><i></i>Barbería</span>
+      <h2>Corte y barba, <i>a tu estilo</i></h2>
+      <p>Estilo urbano o clásico, adaptable a cualquier persona o profesión. En la barba: diseño según tu rostro, rebaje y definición con o sin navaja, con toalla caliente para relajar la piel.</p>
+      <ul class="combo">
+        <li><span>Corte pelo hombre</span><b>$18.990</b></li>
+        <li><span>Barba</span><b>$14.990</b></li>
+        <li class="t"><span>Corte y barba</span><b>$33.980</b></li>
+      </ul>
+      <a class="btn" data-reservar href="#">Reservar con Miguel →</a>
+    </div>
+  </div>
+</section>
+
+<section id="equipo" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh">
+      <div><span class="pill rv"><i></i>Nuestro equipo</span><h2 class="rv">Manos <i>expertas</i></h2></div>
+      <p class="rv">Un especialista para cada servicio.</p>
+    </div>
+    <div class="team">
+      <article class="person rv"><div class="av"><img src="img/equipo-miguel.png" alt="Miguel" loading="lazy"></div><h3>Miguel</h3><span class="r">Barbero</span><p>Cortes, barba, platinados, visos y camuflaje de canas.</p></article>
+      <article class="person rv"><div class="av" aria-hidden="true">D</div><h3>Danae Bratti</h3><span class="r">Estilista</span><p>Corte de mujer, color, balayage, baby lights y alisados.</p></article>
+      <article class="person rv"><div class="av" aria-hidden="true">G</div><h3>Ghis Gonzales</h3><span class="r">Estilista</span><p>Brushing, botox capilar, tratamientos y coloración.</p></article>
+      <article class="person rv"><div class="av" aria-hidden="true">P</div><h3>Priscila Venturelli</h3><span class="r">Nails bar</span><p>Esmaltado permanente, soft gel, degradé y tratamientos.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="trabajos" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh">
+      <div><span class="pill rv"><i></i>Nuestros trabajos</span><h2 class="rv">Resultados que <i>hablan solos</i></h2></div>
+    </div>
+    <div class="gal">
+      <figure class="rv"><img src="img/foto-fade.jpg" alt="Corte fade con barba perfilada" loading="lazy"><figcaption>Fade + barba</figcaption></figure>
+      <figure class="rv"><img src="img/foto-barba.jpg" alt="Perfilado de barba con máquina" loading="lazy"><figcaption>Perfilado de barba</figcaption></figure>
+      <figure class="rv"><img src="img/foto-corte.jpg" alt="Corte de pelo hombre con degradado alto" loading="lazy"><figcaption>Corte con degradado</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion" style="padding-top:0">
+  <div class="wrap loc">
+    <div class="card rv">
+      <span class="pill"><i></i>Visítanos</span>
+      <h2>Dónde <i>estamos</i></h2>
+      <div class="rows">
+        <div class="row"><span class="i"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span><small>Dirección</small><b>Av. Ossa 235, oficina 750, Santiago</b></span></div>
+        <div class="row"><span class="i"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><small>Horario</small><b>Todos los días, 10:30 a 19:00</b></span></div>
+        <div class="row"><span class="i"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M6 8l2-4h8l2 4M7 17v2M17 17v2"/></svg></span><span><small>¿Vienes en auto?</small><b>Estaciona en el Mall Plaza Egaña</b></span></div>
+        <a class="row" href="https://wa.me/56963365053" target="_blank" rel="noopener"><span class="i"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 0 0 6.5 6.5L16 13.5l5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span><span><small>WhatsApp</small><b>+56 9 6336 5053</b></span></a>
+        <a class="row" href="mailto:hairandmore750@gmail.com"><span class="i"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span><span><small>Correo</small><b>hairandmore750@gmail.com</b></span></a>
+      </div>
+    </div>
+    <div class="map rv"><iframe title="Mapa: Av. Ossa 235, Santiago" src="https://www.google.com/maps?q=Avenida+Ossa+235,+Santiago,+Chile&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
+
+<div class="cta-band rv">
+  <h2>¿Listo para <i>tu cambio</i>?</h2>
+  <p>Elige el servicio, el profesional y la hora que más te acomode.</p>
+  <a class="btn" data-reservar href="#">Reservar ahora</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-recorte.png" alt="Hair and More" loading="lazy">
+    <span>Av. Ossa 235, of. 750, Santiago · Todos los días 10:30 a 19:00</span>
+    <span>© 2026 Hair and More · Bakulic Diseños</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/56963365053?text=Hola%20Hair%20and%20More%2C%20quiero%20reservar%20una%20hora." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.4 2.4 1 2.9.8 3.4.7.5 0 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5l-.6-.4z"/></svg></a>
+
+<script src="js/servicios.js"></script>
+<script src="js/variantes.js"></script>
+<script>
+// Las tarjetas de categoría abren directamente esa pestaña
+document.querySelectorAll("[data-go]").forEach(a => a.addEventListener("click", () => {
+  const t = document.querySelector(`#servicios [data-cat="${a.dataset.go}"]`); if (t) t.click();
+}));
+</script>
+</body>
+</html>
