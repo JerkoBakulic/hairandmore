@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hair and More | Barbería, peluquería y nails bar en Santiago</title>
+  <meta name="description" content="Hair and More: barbería, peluquería y nails bar en Av. Ossa 235, oficina 750, Santiago. Abierto todos los días de 10:30 a 19:00. Reserva tu hora online.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hair and More | Barbería, peluquería y nails bar">
+  <meta property="og:description" content="Sacamos la mejor versión de ti. Reserva tu hora online.">
+  <meta property="og:image" content="img/letrero.jpg">
+  <link rel="icon" href="img/equipo-miguel.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera" id="cabecera">
+    <div class="contenedor cabecera__fila">
+      <a class="marca" href="#inicio" aria-label="Hair and More, ir al inicio"><img src="img/logo-recorte.png" alt="Hair and More" width="120" height="84"></a>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#galeria">Trabajos</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="https://hairandmore750.setmore.com/" class="boton boton--dorado" target="_blank" rel="noopener">Reservar hora</a>
+      </nav>
+      <button class="menu-boton" id="menu-boton" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__fondo" aria-hidden="true"><img src="img/letrero.jpg" alt="" width="1448" height="1086"></div>
+      <div class="contenedor hero__contenido">
+        <p class="sobretitulo">Barbería · Peluquería · Nails bar</p>
+        <h1>Sacamos la <em>mejor versión</em> de&nbsp;ti</h1>
+        <p class="hero__bajada">Cortes, barba, color, tratamientos y uñas en un solo lugar. Abierto todos los días en Av. Ossa 235, Santiago.</p>
+        <div class="hero__acciones">
+          <a class="boton boton--dorado" href="https://hairandmore750.setmore.com/" target="_blank" rel="noopener">Reservar hora online</a>
+          <a class="boton boton--linea" href="#servicios">Ver servicios y precios</a>
+        </div>
+        <ul class="hero__datos">
+          <li><strong>Todos los días</strong><span>10:30 a 19:00</span></li>
+          <li><strong>Desde $3.990</strong><span>perfilado de cejas</span></li>
+          <li><strong>Corte hombre</strong><span>$18.990 · 20 min</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="seccion" id="servicios">
+      <div class="contenedor">
+        <div class="titulo-seccion revelar">
+          <p class="sobretitulo">Servicios y precios</p>
+          <h2>Elige tu servicio</h2>
+          <p>Precios en pesos chilenos. Reserva online y te esperamos a la hora.</p>
+        </div>
+        <div class="pestanas revelar" role="tablist" aria-label="Categorías de servicios">
+          <button role="tab" id="tab-barberia" aria-controls="panel-servicios" aria-selected="true" data-cat="barberia">Barbería</button>
+          <button role="tab" id="tab-peluqueria" aria-controls="panel-servicios" aria-selected="false" data-cat="peluqueria" tabindex="-1">Peluquería</button>
+          <button role="tab" id="tab-nails" aria-controls="panel-servicios" aria-selected="false" data-cat="nails" tabindex="-1">Nails bar</button>
+        </div>
+        <div class="servicios revelar" id="panel-servicios" role="tabpanel" aria-labelledby="tab-barberia"></div>
+        <p class="servicios__nota">Los tiempos son referenciales. Los precios pueden variar según el largo y el tipo de cabello.</p>
+      </div>
+    </section>
+
+    <!-- DESTACADO BARBERIA -->
+    <section class="destacado">
+      <div class="contenedor destacado__grilla">
+        <div class="destacado__foto revelar"><img src="img/foto-barba.jpg" alt="Barbero perfilando una barba en Hair and More" width="825" height="1100" loading="lazy"></div>
+        <div class="destacado__texto revelar">
+          <p class="sobretitulo">Barbería</p>
+          <h2>Corte y barba con estilo urbano o clásico</h2>
+          <p>Un corte profesional adaptable a cualquier persona o profesión: look limpio, moderno y elegante. En la barba hacemos perfilado y arreglo para cualquier estilo, con diseño según tu rostro, rebaje y definición con o sin navaja.</p>
+          <ul class="combo">
+            <li><span>Corte pelo hombre</span><strong>$18.990</strong></li>
+            <li><span>Barba</span><strong>$14.990</strong></li>
+            <li class="combo__total"><span>Corte y barba</span><strong>$33.980</strong></li>
+          </ul>
+          <a class="boton boton--dorado" href="https://hairandmore750.setmore.com/" target="_blank" rel="noopener">Reservar con Miguel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="seccion" id="equipo">
+      <div class="contenedor">
+        <div class="titulo-seccion revelar">
+          <p class="sobretitulo">Nuestro equipo</p>
+          <h2>Manos expertas para cada servicio</h2>
+        </div>
+        <div class="equipo">
+          <article class="persona revelar">
+            <div class="persona__foto persona__foto--imagen"><img src="img/equipo-miguel.png" alt="Miguel" width="375" height="400" loading="lazy"></div>
+            <h3>Miguel</h3>
+            <p class="persona__rol">Barbero</p>
+            <p>Cortes, barba, platinados, visos y camuflaje de canas.</p>
+          </article>
+          <article class="persona revelar">
+            <div class="persona__foto" aria-hidden="true">D</div>
+            <h3>Danae Bratti</h3>
+            <p class="persona__rol">Estilista</p>
+            <p>Corte de mujer, color, balayage, baby lights y alisados.</p>
+          </article>
+          <article class="persona revelar">
+            <div class="persona__foto" aria-hidden="true">G</div>
+            <h3>Ghis Gonzales</h3>
+            <p class="persona__rol">Estilista</p>
+            <p>Brushing, botox capilar, tratamientos y coloración.</p>
+          </article>
+          <article class="persona revelar">
+            <div class="persona__foto" aria-hidden="true">P</div>
+            <h3>Priscila Venturelli</h3>
+            <p class="persona__rol">Nails bar</p>
+            <p>Esmaltado permanente, soft gel, degradé y tratamientos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="seccion seccion--carbon" id="galeria">
+      <div class="contenedor">
+        <div class="titulo-seccion revelar">
+          <p class="sobretitulo">Nuestros trabajos</p>
+          <h2>Resultados que hablan solos</h2>
+        </div>
+        <div class="galeria">
+          <figure class="revelar"><img src="img/foto-fade.jpg" alt="Corte fade con barba perfilada" width="825" height="1100" loading="lazy"><figcaption>Fade + barba</figcaption></figure>
+          <figure class="revelar"><img src="img/foto-corte.jpg" alt="Corte de pelo hombre con degradado alto" width="891" height="1100" loading="lazy"><figcaption>Corte con degradado</figcaption></figure>
+          <figure class="revelar"><img src="img/foto-barba.jpg" alt="Perfilado de barba con máquina" width="825" height="1100" loading="lazy"><figcaption>Perfilado de barba</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACION -->
+    <section class="seccion" id="ubicacion">
+      <div class="contenedor ubicacion">
+        <div class="ubicacion__info revelar">
+          <p class="sobretitulo">Visítanos</p>
+          <h2>Dónde estamos</h2>
+          <ul class="datos">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <div><strong>Av. Ossa 235, oficina 750</strong><span>Santiago</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <div><strong>Todos los días</strong><span>10:30 a 19:00</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M6 8l2-4h8l2 4M7 17v2M17 17v2"/></svg>
+              <div><strong>¿Vienes en auto?</strong><span>Te recomendamos estacionar en el Mall Plaza Egaña.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h3.5l2 5-2.5 1.5a11 11 0 0 0 6.5 6.5L16 13.5l5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+              <div><strong>WhatsApp</strong><a href="https://wa.me/56963365053" target="_blank" rel="noopener">+56 9 6336 5053</a></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+              <div><strong>Email</strong><a href="mailto:hairandmore750@gmail.com">hairandmore750@gmail.com</a></div>
+            </li>
+          </ul>
+          <a class="boton boton--dorado" href="https://hairandmore750.setmore.com/" target="_blank" rel="noopener">Reservar hora online</a>
+        </div>
+        <div class="mapa revelar">
+          <iframe title="Mapa: Av. Ossa 235, Santiago" src="https://www.google.com/maps?q=Avenida+Ossa+235,+Santiago,+Chile&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="contenedor cta__contenido revelar">
+        <h2>¿Listo para tu cambio?</h2>
+        <p>Elige el servicio, el profesional y la hora que más te acomode.</p>
+        <a class="boton boton--dorado boton--grande" href="https://hairandmore750.setmore.com/" target="_blank" rel="noopener">Reservar ahora</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <img src="img/logo-recorte.png" alt="Hair and More" width="110" height="77" loading="lazy">
+      <p>Av. Ossa 235, oficina 750, Santiago · Todos los días 10:30 a 19:00</p>
+      <p>© <span id="anio">2026</span> Hair and More · Desarrollado por Bakulic Diseños</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/56963365053?text=Hola%20Hair%20and%20More%2C%20quiero%20reservar%20una%20hora." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.4 2.4 1 2.9.8 3.4.7.5 0 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5l-.6-.4z"/></svg>
+  </a>
+
+  <script src="js/servicios.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
